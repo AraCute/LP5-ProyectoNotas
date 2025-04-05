@@ -1,9 +1,39 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>home</ion-title>
+<ion-header translucent="true">
+  <ion-toolbar style="--background: #b76e79">
+    <ion-title>Notas</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-button (click)="signOut()"> regresar </ion-button>
+<ion-content fullscreen="true" class="ion-padding">
+  <ion-button expand="block" fill="outline" color="medium" (click)="signOut()">
+    <ion-icon name="arrow-back-outline" slot="start"></ion-icon>
+    Regresar
+  </ion-button>
+
+  <!-- Lista de notas -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Nota 1</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Esta es una nota de ejemplo. Puedes agregar, editar o eliminar notas
+      fácilmente.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Nota 2</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Otra nota de prueba para mostrar múltiples entradas.
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Botón para añadir nueva nota -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button style="--background: #b76e79; --color: #fff">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>
